@@ -37,7 +37,7 @@ if api_key:
             ・文脈を理解し、前の会話を踏まえた回答をすること。
             """
             st.session_state.chat = st.session_state.client.chats.create(
-                model="gemini-1.5-flash", # 制限が比較的緩い安定版
+                model="models/gemini-1.5-flash", # 制限が比較的緩い安定版
                 config={'system_instruction': instruction}
             )
             st.session_state.messages = []
